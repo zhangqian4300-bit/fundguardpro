@@ -219,7 +219,7 @@ class CLIInputs:
     end_date: str
     initial_cash: float
     margin_requirement: float
-    show_reasoning: bool = False
+    show_reasoning: bool = True
     show_agent_graph: bool = False
     raw_args: Optional[argparse.Namespace] = None
 
@@ -256,7 +256,7 @@ def parse_cli_inputs(
     )
 
     if include_reasoning_flag:
-        parser.add_argument("--show-reasoning", action="store_true", help="Show reasoning from each agent")
+        parser.add_argument("--no-show-reasoning", dest="show_reasoning", action="store_false", default=True, help="Hide reasoning from each agent")
     if include_graph_flag:
         parser.add_argument("--show-agent-graph", action="store_true", help="Show the agent graph")
 
@@ -280,7 +280,7 @@ def parse_cli_inputs(
         end_date=end_date,
         initial_cash=getattr(args, "initial_cash", 100000.0),
         margin_requirement=getattr(args, "margin_requirement", 0.0),
-        show_reasoning=getattr(args, "show_reasoning", False),
+        show_reasoning=getattr(args, "show_reasoning", True),
         show_agent_graph=getattr(args, "show_agent_graph", False),
         raw_args=args,
     )

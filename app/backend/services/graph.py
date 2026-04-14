@@ -168,7 +168,7 @@ def run_graph(
                 "analyst_signals": {},
             },
             "metadata": {
-                "show_reasoning": False,
+                "show_reasoning": True,
                 "model_name": model_name,
                 "model_provider": model_provider,
                 "request": request,  # Pass the request for agent-specific model access

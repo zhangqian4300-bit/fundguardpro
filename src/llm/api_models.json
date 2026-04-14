@@ -60,6 +60,26 @@
     "provider": "OpenRouter"
   },
   {
+    "display_name": "Qwen 3.6 Plus",
+    "model_name": "qwen3.6-plus",
+    "provider": "Alibaba"
+  },
+  {
+    "display_name": "Qwen Max",
+    "model_name": "qwen-max",
+    "provider": "Alibaba"
+  },
+  {
+    "display_name": "Qwen Plus",
+    "model_name": "qwen-plus",
+    "provider": "Alibaba"
+  },
+  {
+    "display_name": "Qwen Turbo",
+    "model_name": "qwen-turbo",
+    "provider": "Alibaba"
+  },
+  {
     "display_name": "GigaChat-2-Max",
     "model_name": "GigaChat-2-Max",
     "provider": "GigaChat"
